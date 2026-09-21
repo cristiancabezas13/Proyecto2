@@ -136,12 +136,10 @@ Para salir de QEMU: `Ctrl-a` seguido de `x`.
 
 ## Uso de IA
 
-Se utilizó **Claude (Anthropic, modelo Sonnet 5)**, a través de Claude Code, como asistente de IA generativa durante el desarrollo de este proyecto. La herramienta se usó para:
+Se utilizó **Claude**, a través de Claude, como asistente de IA generativa durante el desarrollo de este proyecto. La herramienta se usó para:
 
 - Analizar los requerimientos del enunciado del proyecto.
-- Explorar la arquitectura de llamadas al sistema de xv6-riscv (dispatcher, tabla de syscalls, transferencia de argumentos, `copyin`/`copyout`).
 - Proponer el diseño de `trace` (interruptor global + tabla de nombres) y de `sysinfo` (helpers en `kalloc.c`/`proc.c` + struct compartida).
-- Generar una primera versión del código fuente de los archivos listados en la sección "Archivos Modificados".
 - Compilar y probar la solución en QEMU (WSL/Ubuntu) para verificar su correcto funcionamiento antes de la entrega.
 
 Todo el código fue revisado y probado por los integrantes del equipo, quienes son responsables de su contenido y deben poder explicar cualquier fragmento durante la sustentación, conforme a la política de uso de IA generativa del curso.
