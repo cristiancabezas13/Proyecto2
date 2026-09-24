@@ -139,7 +139,9 @@ Para salir de QEMU: `Ctrl-a` seguido de `x`.
 El video con la compilación, ejecución de `trace`, ejecución de `sysinfo`
 y resultados obtenidos está disponible en:
 
-[Ver video de demostración](https://www.loom.com/share/c5cb5a3289b64facac41da642130ef79))
+[Ver video de demostración](https://www.loom.com/share/c5cb5a3289b64facac41da642130ef79)
+
+[Video Demostracion xv6](https://youtu.be/J0hDocwfLX4)
 
 ## Uso de IA
 
