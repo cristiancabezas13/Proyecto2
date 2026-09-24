@@ -134,6 +134,13 @@ trace: exec programa_inexistente failed
 
 Para salir de QEMU: `Ctrl-a` seguido de `x`.
 
+## Video de demostración
+
+El video con la compilación, ejecución de `trace`, ejecución de `sysinfo`
+y resultados obtenidos está disponible en:
+
+[Ver video de demostración](https://www.loom.com/share/c5cb5a3289b64facac41da642130ef79))
+
 ## Uso de IA
 
 Se utilizó **Claude**, a través de Claude, como asistente de IA generativa durante el desarrollo de este proyecto. La herramienta se usó para:
