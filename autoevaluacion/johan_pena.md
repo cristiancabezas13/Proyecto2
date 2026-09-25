@@ -1,31 +1,25 @@
 # Autoevaluación — Proyecto 2: System Calls en xv6
-
+ 
 **Nombre:** Johan Peña
-
-> Este archivo debe ser completado individualmente. Reemplaza el texto entre `[ ]` por tu propia reflexión.
-
+ 
 ## Aporte al proyecto
-
-[Describe qué partes del proyecto implementaste, revisaste o probaste directamente: p. ej. syscall `trace`, syscall `sysinfo`, pruebas en QEMU, README, etc.]
-
+Participé en las pruebas de las syscalls `trace` y `sysinfo` en QEMU, verificando casos exitosos, casos de error y concurrencia.
+ 
 ## Comprensión de la implementación
-
-[Explica con tus propias palabras cómo funciona `trace` y cómo funciona `sysinfo`. Debes poder sustentar esto oralmente frente al docente.]
-
+Entiendo `trace` como una especie de "espía" activado a nivel del kernel: uno le dice qué syscall vigilar por su nombre, y a partir de ahí, cada vez que esa syscall se dispara en cualquier parte del sistema, aparece en consola un reporte con el proceso que la llamó, el resultado que dio y el estado de algunos registros en ese momento. No es algo que uno active por proceso, sino que queda "prendido" para todo el sistema hasta que se reinicia.
+ 
+Por su parte, `sysinfo` es más como una fotografía del estado del sistema en un instante dado: cuánta RAM queda libre, cuántas páginas de memoria están ocupadas, cuántas disponibles, y cuántos procesos están esperando su turno para correr. El kernel arma esos números y se los entrega al programa que los pidió.
+ 
 ## Dificultades encontradas
-
-[¿Qué fue lo más difícil de entender o implementar? ¿Cómo lo resolviste?]
-
+Lo más difícil fue entender por qué `trace` afectaba a procesos que no había mencionado, como la propia shell. Lo resolví revisando que es un interruptor global y repitiendo pruebas hasta confirmar el comportamiento.
+ 
 ## Aprendizajes
-
-[¿Qué aprendiste sobre el funcionamiento interno de un sistema operativo / de xv6 con este proyecto?]
-
+Aprendí a verificar el funcionamiento de un sistema probando casos de error y concurrencia, no solo el caso ideal, y cómo un kernel expone información interna a los programas de usuario mediante una syscall.
+ 
 ## Uso de herramientas de IA
-
-[Declara específicamente cómo usaste IA generativa en tu proceso individual (si aplica) y cómo verificaste que comprendes el código resultante.]
-
+Utilicé IA para apoyar el diseño de mis pruebas y resolver dudas puntuales sobre el comportamiento del sistema. Verifiqué los resultados ejecutando cada prueba en QEMU.
+ 
 ## Autocalificación
-
-**Nota propuesta (0.0–5.0):** [ ]
-
-**Justificación:** [ ]
+**Nota propuesta (0.0–5.0): 4.0**
+ 
+**Justificación:** Cumplí con mi rol de pruebas y verificación, y comprendo el funcionamiento de ambas syscalls, aunque no participé en la implementación directa del código.
